@@ -1,7 +1,5 @@
 # ✅ To-Do List
 
-![Screenshot](assets/screenshot.jpg)
-
 [🔗 Live demo](https://to-do-list-eyas.netlify.app/) · ![Live badge](https://img.shields.io/badge/Live-Netlify-brightgreen)
 
 ## Overview
