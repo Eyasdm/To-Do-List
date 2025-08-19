@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="img/list.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>To-do-list</title>
+  </head>
+  <body class="ltr" id="body">
+    <div class="all-tasks">
+      <div class="menu-container">
+        <div class="to-do-list">
+          <span class="to-do-list-name">To-do-list</span>
+          <span id="edit-to-do-list-name"
+            ><img src="img/pen.png" alt="Edit pen" class="icon edit-name-pen" />
+          </span>
+        </div>
+        <div class="model hidden">
+          <div class="winner">Choose the language:</div>
+          <div class="modal-btn">
+            <button class="english-btn">English</button>
+            <button class="arabic-btn">عربي</button>
+          </div>
+        </div>
+        <div class="overlay hidden"></div>
+        <div class="dots-menu-container">
+          <button class="menu-btn">...</button>
+          <div class="modal hidden">
+            <!-- <p class="menu-dots-option Edit-task">Edit task</p> -->
+            <p class="menu-dots-option languages">
+              <span class="language-label">Language</span>
+              <span
+                ><select class="lang-select" name="" id="">
+                  <option class="english-language-option" value="en">
+                    English
+                  </option>
+                  <option class="arabic-language-option" value="ar">
+                    Arabic
+                  </option>
+                </select>
+              </span>
+            </p>
+            <p class="menu-dots-option Delete-task">Delete task</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="container tasks" id="task-menu">
+          <div class="task edit-area">
+            <div class="task-content">
+              <span> <button class="task-btn"></button></span
+              ><span class="text-value edit" data-id="1"
+                >Click ➕ to create a new task</span
+              >
+            </div>
+          </div>
+
+          <div class="task edit-area">
+            <div class="task-content">
+              <span> <button class="task-btn"></button></span
+              ><span class="text-value edit" data-id="2"
+                >To edit task click the ... menu</span
+              >
+            </div>
+          </div>
+
+          <div class="task edit-area">
+            <div class="task-content">
+              <span> <button class="task-btn"></button></span
+              ><span class="text-value edit" data-id="3"
+                >Tap the ◯ to mark task as done</span
+              >
+            </div>
+          </div>
+        </div>
+        <h4>
+          <span class="completed">Completed</span> <span>(</span>
+          <span class="completed-tasks-num">2</span>
+          <span>)</span>
+        </h4>
+        <div class="container completed-tasks">
+          <div class="completed-task edit-area">
+            <div class="task-content">
+              <span class="completed-task-area">
+                <button class="completed-task-btn">✔</button></span
+              ><span class="completed-task-text edit" data-id="4"
+                >Click ✔️ to undo and return to To‑do</span
+              >
+            </div>
+            <span
+              ><img
+                src="img/recycle-bin.png"
+                alt="Edit pen"
+                class="icon bin hidden"
+              />
+            </span>
+          </div>
+          <div class="completed-task edit-area">
+            <div class="task-content">
+              <span class="completed-task-area">
+                <button class="completed-task-btn">✔</button></span
+              ><span class="completed-task-text edit" data-id="5">
+                Tap ✓ to complete, then tap ... to Delete task</span
+              >
+            </div>
+            <span
+              ><img
+                src="img/recycle-bin.png"
+                alt="delete bin"
+                class="icon bin hidden"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+      <button class="add-note-btn">+</button>
+    </div>
+  </body>
+</html>
+<!-- ✔ -->

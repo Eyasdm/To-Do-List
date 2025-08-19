@@ -1,0 +1,400 @@
+/* ========= Global Reset and Base Settings ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 65%;
+}
+
+body {
+  background-color: #f8f9fd;
+  height: 100vh;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* ========= RTL / LTR ========= */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* ========= Container ========= */
+.all-tasks {
+  background-color: #f8f9fd;
+  padding: 2rem;
+  /* border-radius: 2.4rem; */
+  width: 100%;
+  height: 100%;
+  /* text-align: left; */
+  position: relative;
+}
+
+/* ========= Header ========= */
+.to-do-list {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #1c1b41;
+  /* margin-bottom: 1rem; */
+  padding-bottom: 1.2rem;
+}
+
+/* ========= Tasks Container ========= */
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 4.2rem;
+}
+
+/* ========= Task Content ========= */
+.task-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ========= Individual Task ========= */
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1c1b41;
+}
+
+/* ========= Task Button ========= */
+.task-btn {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  border: 2px solid #1c1b41;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1c1b41;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.task-btn:hover::after {
+  content: '✔';
+  position: absolute;
+  font-size: 2.8rem;
+  color: #1c1b41;
+}
+
+/* ========= Heading for Completed Section ========= */
+h4 {
+  padding-bottom: 1.6rem;
+  font-size: 2.8rem;
+  color: #1c1b41;
+}
+
+/* ========= Completed Tasks Container ========= */
+.completed-tasks {
+  margin-bottom: 0.5rem;
+  color: #757575;
+  padding-bottom: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ========= Completed Task Text ========= */
+.completed-task-text {
+  text-decoration: line-through;
+  font-size: 2rem;
+}
+
+/* ========= Completed Task ========= */
+.completed-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  color: #757575;
+}
+
+/* ========= Completed Task Button ========= */
+.completed-task-btn {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  border: 2px solid #757575;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #757575;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ========= Add Note Button ========= */
+.add-note-btn {
+  width: 6.4rem;
+  height: 4.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #1c1b41;
+  color: #f8f9fd;
+  font-size: 2.6rem;
+  font-weight: 500;
+  position: absolute;
+  cursor: pointer;
+  bottom: 2.5rem;
+  inset-inline-end: 2.5rem;
+}
+
+/* ========= Menu Container ========= */
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ========= Menu Button ========= */
+.menu-btn {
+  width: 3.6rem;
+  height: 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #f8f9fd;
+  color: #1c1b41;
+  font-size: 3.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding-bottom: 3rem;
+}
+
+/* ========= Input Fields ========= */
+input {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  color: #1c1b41;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+/* ========= Completed Task Area ========= */
+.completed-task-area {
+  cursor: pointer;
+}
+
+/* ========= Icons ========= */
+.icon {
+  width: 3.4rem;
+  height: 3.4rem;
+  color: #1c1b41;
+  cursor: pointer;
+  /* inset-inline-end: 1rem; */
+  filter: brightness(0) saturate(100%) invert(15%) sepia(15%) saturate(1800%)
+    hue-rotate(210deg) brightness(90%) contrast(95%);
+}
+
+/* ========= Dots Menu Container ========= */
+.dots-menu-container {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* ========= Modal Dots Menu ========= */
+.modal {
+  position: absolute;
+  top: 30%;
+  inset-inline-end: 0;
+  width: 22rem;
+  background-color: white;
+  /* padding: 1.5rem; */
+  border-radius: 8px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.menu-dots-option {
+  font-family: 'Poppins';
+  color: #1c1b41;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  padding: 1.5rem;
+  text-align: inset-inline-start;
+  transition: background-color 0.2s ease;
+}
+
+.menu-dots-option:hover {
+  background-color: #f0f0f0;
+  /* border-radius: 8px; */
+}
+
+.Edit-task:hover {
+  border-radius: 8px 8px 0 0;
+}
+
+.Delete-task:hover {
+  border-radius: 0 0 8px 8px;
+}
+
+/* ========= Hidden Elements ========= */
+.hidden {
+  display: none;
+}
+
+/* ========= Language Icon and Selector ========= */
+.lang-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.lang-icon:hover {
+  transform: scale(1.1);
+}
+
+.lang-select {
+  padding: 0.7rem 1rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #1c1b41;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 36px;
+}
+
+/* ========= Modal for Language Selection ========= */
+.model {
+  position: absolute;
+  font-weight: 500;
+  color: #1c1b41;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  background-color: white;
+  padding: 4rem;
+  gap: 1.2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.01);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.8rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+/* ========= Duplicate Hidden Class  ========= */
+.hidden {
+  display: none;
+}
+
+/* ========= Modal Button Container ========= */
+.modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.english-btn,
+.arabic-btn {
+  /* flex: 1; */
+  width: 10rem;
+  border: none;
+  background-color: #1c1b41;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/* ========= Responsive (Below 550px) ========= */
+@media (max-width: 35em) {
+  html,
+  body {
+    background-color: #f8f9fd;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+  }
+  .all-tasks {
+    background-color: #f8f9fd;
+    padding: 2rem;
+
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+  }
+  .model {
+    width: 80%;
+    padding: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .english-btn,
+  .arabic-btn {
+    font-size: 2.2rem;
+    padding: 0.8rem;
+    width: 12rem;
+  }
+}
+
+/* ========= Languages Option Container ========= */
+.languages {
+  display: flex;
+  justify-content: space-between;
+}
